@@ -9,6 +9,7 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { TRPCOptionsProxy } from "@trpc/tanstack-react-query";
 import { useEffect } from "react";
+import { Toaster } from "sonner";
 import appCss from "~/lib/styles/app.css?url";
 import { TRPCRouter } from "~/trpc/router";
 
@@ -39,6 +40,8 @@ function RootComponent() {
   return (
     <RootDocument>
       <Outlet />
+
+      <Toaster />
     </RootDocument>
   );
 }
